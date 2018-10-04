@@ -1,0 +1,19 @@
+{
+  "name": "monorepo-node-services",
+  "version": "1.1.0",
+  "author": "cheshireCode",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/node_modules/@monorepo-services/*"
+  ],
+  "dependencies": {
+    "pm2": "^3.2.1"
+  },
+  "scripts": {
+    "pm2": "pm2",
+    "start": "pm2 start pm2.json",
+    "stop": "pm2 stop pm2.json",
+    "kill": "pm2 delete pm2.json"
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "apps": [
+      {
+        "name": "service-1",
+        "exec_mode": "cluster",
+        "instances": "max",
+        "cwd": "./packages/node_modules/@monorepo-services/service-1",
+        "script": "index.js",
+        "wait_ready": true,
+        "kill_timeout" : 4000,
+        "watch": ["."],
+        "ignore_watch" : ["node_modules"],
+        "watch_options": {
+          "followSymlinks": false
+        }
+      },
+      {
+        "name": "service-2",
+        "exec_mode": "cluster",
+        "instances": "max",
+        "cwd": "./packages/node_modules/@monorepo-services/service-2",
+        "script": "index.js",
+        "wait_ready": true,
+        "kill_timeout" : 4000,
+        "watch": ["."],
+        "ignore_watch" : ["node_modules"],
+        "watch_options": {
+          "followSymlinks": false
+        }
+      }
+    ]
+  }
